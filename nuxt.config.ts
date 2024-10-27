@@ -20,7 +20,8 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     'pinia-plugin-persistedstate/nuxt',
     '@nuxtjs/tailwindcss',
-	'nuxt-swiper'
+	'nuxt-swiper',
+	'@nuxt/image'
     // "@nuxtjs/leaflet",
   ],
   css: ['swiper/css','~/assets/css/tailwind.css'],

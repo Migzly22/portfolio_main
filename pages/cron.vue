@@ -73,90 +73,61 @@ onMounted(() => {
 
 <style scoped>
 .carousel-container {
-  width: 100%;
-  padding: 50px 0;
-  background: #f5f5f5;
-  overflow: hidden;
+  @apply w-full py-12 bg-gray-100 overflow-hidden;
 }
 
 .swiper {
-  width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  @apply w-full py-7;
 }
 
 .swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-  transition: all 0.3s ease;
+  @apply bg-center bg-cover w-72 h-72 transition-all duration-300 ease-in-out;
 }
 
 .slide-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
+  @apply relative w-full h-full;
 }
 
 .slide-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
+  @apply w-full h-full object-cover rounded-lg;
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.5);
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  border-radius: 8px;
+  @apply absolute inset-0 bg-white bg-opacity-50 pointer-events-none transition-opacity duration-300 ease-in-out rounded-lg;
 }
 
 .slide-number {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-weight: bold;
-  z-index: 2;
+  @apply absolute top-2 left-2 bg-black bg-opacity-70 text-white px-2 py-1 rounded font-bold z-10;
 }
 
 /* Center slide styling */
 .swiper-slide-active {
-  transform: scale(1.2);
-  z-index: 2;
+  @apply scale-120 z-10;
 }
 
 .swiper-slide-active .overlay {
-  opacity: 0;
+  @apply opacity-0;
 }
 
 /* Side slides styling */
 .swiper-slide-prev,
 .swiper-slide-next {
-  transform: scale(0.8);
+  @apply scale-90;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: #333;
+  @apply text-gray-800;
 }
 
 .swiper-pagination-bullet-active {
-  background: #333;
+  @apply bg-gray-800;
 }
 
-/* Ensure proper spacing for the scaled center slide */
+/* Proper spacing for scaled center slide */
 .swiper-wrapper {
-  padding: 20px 0;
+  @apply py-5;
 }
+
+
 </style>

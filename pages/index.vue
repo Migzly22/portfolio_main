@@ -3,15 +3,17 @@
     <div class="h-full">
       <MainHomePage/>
     </div>
-    <div class="h-full" id="viewProjects">
 
+    <div>
+      <CarouselTechStack />
     </div>
+
 
   </div>
 </template>
 
 <script lang="ts" setup>
-  
+
 </script>
 
 <style>
